@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sample" class = "sample-class"> par</p>
+    <input type ='text' id="sample-input">
+    <button id="btn" onClick = "getValue(this)">Submit</button>
+</body>
+
+<script>
+    // var sample = document.getElementById('sample');
+    // sample.innerHTML = 'true';
+    // console.log(sample);
+
+    // var getByClass = document.getElementsByClassName("sample-class");
+    // console.log(getByClass[0].innerHTML = 'return par')
+
+    // var getByTagName = document.getElementsByTagName('p')
+    // console.log(getByTagName[0].innerHTML = 'true')
+
+    // var getByQuerySelector = document.querySelectorAll('p.sample-class')
+    // console.log(getByQuerySelector[0])
+
+    function getValue()
+    {
+        let text = document.getElementById('sample-input')
+        let coba = document.getElementById('sample')        
+        let btn = document.getElementById('btn')
+        btn.setAttribute('disabled', true)
+        
+    }
+
+    var tagP = document.getElementById('sample')
+    tagP.style.color='red'
+    
+
+</script>
+</html>

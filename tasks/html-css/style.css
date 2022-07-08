@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+width: 100%;
+min-height: 100vh;
+padding-right: 3%;
+padding-left: 3%;
+box-sizing: border-box;
+overflow: hidden;
+background: linear-gradient(rgb(25, 106, 188),rgb(163, 131, 203));
+}
+
+.navbar{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: black;
+padding:10px;
+}
+
+.navbar ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar ul li{
+    margin-right: 30px;
+    padding: 10px;
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    opacity: 60%;
+    font-size: 14px;
+}
+
+.navbar ul li a:hover{
+    color:white;
+    opacity:1;
+}
+
+
+.navbar .logo img{
+    width: 60px;
+    margin: 30px 0;
+}
+
+.banner{
+    padding:10px;
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.banner h1{
+    font-size:54px;
+    color:white;
+    padding:5px 20px;
+}
+
+.banner h2{
+    color:white;
+    padding:0 20px;
+}
+
+.banner h3{
+    color:white;
+    padding:0 20px;
+}
+
+.banner p{
+    color: white;
+    padding: 10px 20px;
+    font-weight:100;
+}
+
+.banner a{
+    color: white;
+    padding: 10px 20px;
+    font-weight:100;
+}
+
+.banner-img .backdrop{
+    height: 60vh;
+    width: 500px;
+}
+
+.info{
+    margin-top:30px;
+    padding:10px;
+    display:flex;
+    text-align: center;
+    width:100%;
+    /* background-color:beige; */
+}
+
+.info h3, .info p{
+    padding:10px;
+    color: white;    
+}
+
+.info1, .info2, .info3{
+    margin:10px 10px;
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color:white;
+    
+}

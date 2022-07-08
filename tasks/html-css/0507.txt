@@ -1,0 +1,10 @@
+ll > detail ls
+ls = dir
+
+
+tugas bikin html css company profile perusahaan (buat kamis)
+ada nav, dalemnya ada logo (cek web celerates buat ref)
+banner sekilas info dan gambar
+content profil perusahaan (e.g bisnisnya ada apa aja)
+footer info perusahaan (e.g alamat,kontak)
+ga harus responsive, pake flexbox

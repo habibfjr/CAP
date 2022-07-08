@@ -1,0 +1,7 @@
+field ada 3
+nama, alamat, no hp
+harus ada submit
+on click submit, data masuk table
+field ga kosong, return alert beserta peringatan
+onclick field kosong
+labeling tiap input field

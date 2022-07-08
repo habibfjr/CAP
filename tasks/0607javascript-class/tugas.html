@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas DOM Javascript</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #table {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #table td, #table th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+        
+        #table tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #table tr:hover {background-color: #ddd;}
+        
+        #table th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+        </style>
+</head>
+<body>
+    
+        <label >Name</label><br>
+        <input type="text" id="name" ><br>
+        <label >Address</label><br>
+        <input type="text" id="address" ><br>
+        <label >Phone</label><br>
+        <input type="text" id="phone"><br>
+        <label >E-mail</label><br>
+        <input type="email" id="email" ><br>
+        <label>Category</label><br>
+        <input type="checkbox" class="category" value="UI/UX">UI/UX<br>
+        <input type="checkbox" class="category" value="SE">Software Engineer<br>
+        <input type="checkbox" class="category" value="Developer">Web Developer<br>
+        <input type="checkbox" class="category" value="DevOps">DevOps<br>
+        <input type="checkbox" class="category" value="QA">QA<br><br>
+        <input type="button" value="Add Data" onClick="getData()">
+      
+<br><br>
+    <table border="1" id="table" >
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>E-mail</th>
+          <th>Category</th>
+        </tr>
+      </table> 
+</body>
+
+<script>
+    function getData()
+    {
+        
+            let name=document.getElementById("name");
+            let address=document.getElementById("address");
+            let phone=document.getElementById("phone"); 
+            let email=document.getElementById("email"); 
+            let checkbox=document.querySelectorAll('input[type="checkbox"]'); 
+            var countCheckbox = 0;
+            let dataCheckbox = [];
+
+            for (let i=0;i<checkbox.length; i++){
+                if (checkbox[i].checked){
+                    countCheckbox++;
+                    dataCheckbox.push(checkbox[i].value)
+                    console.log(dataCheckbox)
+                }
+            }
+            // cek 1 1 pake looping baiknya
+            
+            // ex: checkbox ada 2 -> let check = doc queryall('input[type="checkbox"]'') var countCheck = 0 --- for (let i = 0; i< checkbox.length;i++) if(checkbox[1].checked){countCheckbox++;}   
+
+            
+            
+        if(name.value == ""){
+          return  alert("please fill out the name");
+
+        } else if(address.value == ""){
+          return  alert("please fill out the address");
+
+        } else if (phone.value == ""){
+          return  alert("please fill out the number");  
+
+        } else if (!phone.value.match(/\+62?(\d+)+|\(\d+\)(\d+)/g)){
+          return  alert("phone number is not valid");
+
+        }else if (email.value == ""){
+          return  alert("please fill out the email");
+
+        } else if(!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)){
+          return  alert("please input valid email");
+
+        } else if(countCheckbox == 0){
+            return alert("please choose one category");
+
+        } else
+        
+        {
+
+
+            let table = document.getElementById("table");
+            let row = table.insertRow();
+            let cell1 = row.insertCell();
+            let cell2 = row.insertCell();
+            let cell3 = row.insertCell();
+            let cell4 = row.insertCell();
+            let cell5 = row.insertCell();
+
+            cell1.innerHTML=name.value;
+            cell2.innerHTML=address.value;
+            cell3.innerHTML=phone.value;
+            cell4.innerHTML=email.value;
+            cell5.innerHTML=dataCheckbox;
+
+            name.value="";
+            address.value="";
+            phone.value="";
+            email.value="";
+            for (let x of dataCheckbox) {
+                checkbox[x].removeAttribute('checked');
+            }
+
+        }
+         
+    }
+
+
+
+
+</script>
+</html>

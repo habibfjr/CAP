@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+width: 100%;
+min-height: 100vh;
+padding-left: 8%;
+padding-right: 8%;
+box-sizing: border-box;
+overflow: hidden;
+}
+
+.navbar{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+/* border: 2px solid black; */
+}
+
+.logo, .menu{
+width: 10%;
+/* border: 1px solid black; */
+}
+
+/* .logo{
+    float:left;
+}
+.menu{
+    float: right;
+} */
+
+.nav{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* width: 80%; */
+    /* border: 1px solid black; */
+    margin-left: 40px;
+}
+
+.navbar ul li{
+    margin-right: 30px;
+    padding: 10px;
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    opacity: 60%;
+    font-size: 14px;
+}
+
+.navbar ul li a:hover{
+    color:aqua;
+    opacity:1;
+}
+
+
+.navbar .menu img{
+    width: 30px;
+}
+
+.navbar .logo img{
+    width: 60px;
+    margin: 30px 0;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    margin: 100px 0;
+}
+
+.col-1{
+    width: 40%;
+    margin-left: 50px;
+}
+
+.col-1 h2 {
+    font-size: 54px;
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    color: gray;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col-1 p{
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+}
+
+.col-1 h4{
+    /* font-size: 10px; */
+    /* font-weight: 100; */
+    padding: 10px;
+}
+
+.col-2{
+    position:relative;
+    width:60%;
+    display:flex;
+    align-items: center;
+}
+
+.col-2 .controller{
+    width: 85%;
+}
+
+.add-to-cart-button{
+    text-align: center;
+    color: white;
+    cursor:pointer;
+}
+
+.add-to-cart-button img{
+    width: 35px;
+    margin-bottom: 5px;
+}
+
+.color-box{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(red,green);
+    z-index: -1;
+    top: 0;
+    right: 0;
+    border-radius: 8px;
+}
+
+.buy-button{
+    width: 140px;
+    border:0;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    background: blue;
+    border-radius: 8px;
+    opacity:0.8;
+    cursor:pointer;
+}
+
+.buy-button:hover{
+    width: 160px;
+    opacity: 1;
+    background: grey;
+}
