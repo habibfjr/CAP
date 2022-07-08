@@ -80,6 +80,7 @@
                     countCheckbox++;
                     dataCheckbox.push(checkbox[i].value)
                     console.log(dataCheckbox)
+                    console.log(checkbox)
                 }
             }
             // cek 1 1 pake looping baiknya
@@ -132,9 +133,12 @@
             address.value="";
             phone.value="";
             email.value="";
-            for (let x of dataCheckbox) {
-                checkbox[x].removeAttribute('checked');
-            }
+            for (let i=0;i<checkbox.length; i++){
+                if (checkbox[i].checked){
+                  checkbox[i].checked = false;  
+                  countCheckbox--;
+                }
+                }
 
         }
          
